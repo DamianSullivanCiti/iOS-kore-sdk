@@ -31,8 +31,15 @@ open class HTTPRequestManager : NSObject {
         // Session Configuration
         let configuration = URLSessionConfiguration.default
         
+        // Security Policy
+        let securityPolicy = AFSecurityPolicy(pinningMode: .certificate)
+        securityPolicy.pinnedCertificates = AFSecurityPolicy.certificates(in: Bundle.main)
+        securityPolicy.allowInvalidCertificates = true
+        securityPolicy.validatesDomainName = false
+        
         //Manager
         sessionManager = AFHTTPSessionManager.init(baseURL: URL.init(string: Constants.URL.baseUrl) as URL!, sessionConfiguration: configuration)
+        sessionManager?.securityPolicy = securityPolicy
         
         // Request
         let requestSerializer = AFJSONRequestSerializer()
