@@ -173,10 +173,10 @@ class AudioComposeView: UIView {
     
     @objc fileprivate func audioButtonAction() {
         if !self.isActive {
-            GoogleASRService.checkAudioRecordPermission(block: { [weak self] in
-                self?.isActive = true
-                self?.startAudioRecording()
-            })
+//            GoogleASRService.checkAudioRecordPermission(block: { [weak self] in
+//                self?.isActive = true
+//                self?.startAudioRecording()
+//            })
         } else {
             self.isActive = false
             self.stopAudioRecording()

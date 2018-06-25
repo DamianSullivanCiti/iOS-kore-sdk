@@ -37,7 +37,7 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
     var typingStatusView: KRETypingStatusView!
     var webViewController: InputTOWebViewController!
 
-    let sttClient: GoogleASRService = GoogleASRService(api_key: SDKConfiguration.speechConfig.API_KEY)
+    //let sttClient: GoogleASRService = GoogleASRService(api_key: SDKConfiguration.speechConfig.API_KEY)
     var speechSynthesizer: AVSpeechSynthesizer!
     
     // MARK: init
@@ -60,7 +60,7 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
         self.configureQuickReplyView()
         self.configureTypingStatusView()
         self.configureBotClient()
-        self.configureSTTClient()
+        //self.configureSTTClient()
         
         isSpeakingEnabled = true
         self.speechSynthesizer = AVSpeechSynthesizer()
@@ -114,7 +114,7 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
             self.botClient.disconnect()
         }
         self.deConfigureBotClient()
-        self.deConfigureSTTClient()
+        //self.deConfigureSTTClient()
         self.stopTTS()
         self.composeView.growingTextView.viewDelegate = nil
         self.composeView.delegate = nil
@@ -206,10 +206,10 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
         
         self.audioComposeView.voiceRecordingStarted = { [weak self] (composeBar) in
             self?.stopTTS()
-            self?.sttClient.start()
+            //self?.sttClient.start()
         }
         self.audioComposeView.voiceRecordingStopped = { [weak self] (composeBar) in
-            self?.sttClient.stop()
+            //self?.sttClient.stop()
         }
         self.audioComposeView.getAudioPeakOutputPower = { () in
             return 0.0
@@ -440,7 +440,7 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
             }
         }
     }
-    
+ /*
     func configureSTTClient() {
         self.sttClient.onError = { [weak self] (error) in
             guard let strongSelf = self else {
@@ -480,6 +480,7 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
         self.sttClient.onError = nil
         self.sttClient.onResponse = nil
     }
+    */
     
     func updateNavBarPrompt() {
         self.navigationItem.leftBarButtonItem?.isEnabled = true
@@ -733,9 +734,9 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
     }
     
     func composeBarViewSpeechToTextButtonAction(_: ComposeBarView) {
-        GoogleASRService.checkAudioRecordPermission(block: { [weak self] in
-            self?.speechToTextButtonAction()
-        })
+//        GoogleASRService.checkAudioRecordPermission(block: { [weak self] in
+//            self?.speechToTextButtonAction()
+//        })
     }
     
     func composeBarViewDidBecomeFirstResponder(_: ComposeBarView) {
