@@ -45,20 +45,27 @@ open class RTMPersistentConnection : NSObject, SRWebSocketDelegate {
         if (self.tryReconnect == true) {
             url.append("&isReconnect=true")
         }
-        var certs = [SecCertificate]()
         
+        // SSG URL
+        var urlComponents = URLComponents(string: url)
+        urlComponents?.host = "soawebsocketsit.citi.com"
+        urlComponents?.scheme = "https"
+        let ssgURL = urlComponents?.url
+        print("SSG URL: \(ssgURL)")
+        
+        let request = MutableURLRequest(url: URL(string: url)! as URL) as MutableURLRequest!
+
+        // Pined certificates
+        var certs = [SecCertificate]()
         var paths = Bundle.main.paths(forResourcesOfType: "cer", inDirectory: nil)
         for path in paths {
             if let certificateData = NSData(contentsOfFile: path), let cert = SecCertificateCreateWithData(nil, certificateData) {
                 certs.append(cert)
             }
         }
-        
-        let request = MutableURLRequest(url: URL(string: url)! as URL) as MutableURLRequest!
         request?.sr_SSLPinnedCertificates = certs
         
         self.websocket = SRWebSocket(urlRequest: request as! URLRequest)
-
         self.websocket.delegate = self
         self.websocket.open()
     }
