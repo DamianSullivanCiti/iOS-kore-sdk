@@ -136,8 +136,15 @@ class AppLaunchViewController: UIViewController {
         // Session Configuration
         let configuration = URLSessionConfiguration.default
         
+        // Security Policy
+        let securityPolicy = AFSecurityPolicy(pinningMode: .certificate)
+        securityPolicy.pinnedCertificates = AFSecurityPolicy.certificates(in: Bundle.main)
+        securityPolicy.allowInvalidCertificates = true
+        securityPolicy.validatesDomainName = false
+        
         //Manager
         sessionManager = AFHTTPSessionManager.init(baseURL: URL.init(string: SDKConfiguration.serverConfig.JWT_SERVER) as URL!, sessionConfiguration: configuration)
+        sessionManager?.securityPolicy = securityPolicy
         
         // NOTE: You must set your URL to generate JWT. 
         let urlString: String = SDKConfiguration.serverConfig.koreJwtUrl()
