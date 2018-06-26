@@ -8,6 +8,7 @@
 
 import UIKit
 import GD.Runtime
+import GD.SecureCommunication
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -61,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // GD
     func didAuthorize() -> Void {
         print(#file, #function)
-        
+        GDURLLoadingSystem.enableSecureCommunication()
     }
 }
 
