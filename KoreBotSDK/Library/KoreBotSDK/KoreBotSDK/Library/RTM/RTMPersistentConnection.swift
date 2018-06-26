@@ -49,8 +49,12 @@ open class RTMPersistentConnection : NSObject, WebSocketDelegate, WebSocketPongD
         
         socket = WebSocket(url: URL(string: url)!)
         //socket = WebSocket(url: URL(string: "wss://echo.websocket.org")!)
-
         
+        socket?.disableSSLCertValidation = true
+        let security = SSLSecurity()
+        security.validatedDN = false
+        security.validateEntireChain = false
+        socket?.security = security
         
         socket?.delegate = self
         socket?.pongDelegate = self
