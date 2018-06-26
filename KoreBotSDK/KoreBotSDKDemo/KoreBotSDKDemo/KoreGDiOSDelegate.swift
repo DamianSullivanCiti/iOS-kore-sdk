@@ -103,7 +103,15 @@ class KoreGDiOSDelegate: NSObject, GDiOSDelegate {
                 let appLaunchViewController: AppLaunchViewController = AppLaunchViewController(nibName: "AppLaunchViewController", bundle: nil)
                 let navigationController: UINavigationController = UINavigationController(rootViewController: appLaunchViewController)
                 self.rootViewController = navigationController
-                self.appDelegate!.window?.rootViewController = navigationController
+                //TODO: Find out why below LOC not working.
+                //self.appDelegate!.window?.rootViewController = navigationController
+
+                let window = UIWindow(frame: UIScreen.main.bounds)
+                window.backgroundColor = UIColor.white
+                window.rootViewController = navigationController
+
+                self.appDelegate!.window = window
+                self.appDelegate!.window?.makeKeyAndVisible()
                 
                 hasAuthorized = true
                 didAuthorize()
