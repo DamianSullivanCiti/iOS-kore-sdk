@@ -20,6 +20,7 @@
 		0CD0CD552077491200FD46F9 /* barrylogo@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0CD522077491100FD46F9 /* barrylogo@2x.png */; };
 		0CD0CD562077491200FD46F9 /* barrylogo@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0CD532077491100FD46F9 /* barrylogo@3x.png */; };
 		0CD0CD572077491200FD46F9 /* barrylogo.png in Sources */ = {isa = PBXBuildFile; fileRef = 0CD0CD542077491100FD46F9 /* barrylogo.png */; };
+		2D2FF33A20E2A1D300C10003 /* citisso-7dc8.nam.nsroot.net.cer in Resources */ = {isa = PBXBuildFile; fileRef = 2D2FF33920E2A1D300C10003 /* citisso-7dc8.nam.nsroot.net.cer */; };
 		2D5BE0A020CF0F1900C5C4F6 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D5BE09F20CF0F1800C5C4F6 /* Entitlements.plist */; };
 		2D5BE0A220CF124100C5C4F6 /* KoreGDiOSDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BE0A120CF123F00C5C4F6 /* KoreGDiOSDelegate.swift */; };
 		2DD9C0DF20CF02930053D5B0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD9C0DE20CF02930053D5B0 /* AdSupport.framework */; };
@@ -117,6 +118,7 @@
 		0CD0CD522077491100FD46F9 /* barrylogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrylogo@2x.png"; sourceTree = "<group>"; };
 		0CD0CD532077491100FD46F9 /* barrylogo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrylogo@3x.png"; sourceTree = "<group>"; };
 		0CD0CD542077491100FD46F9 /* barrylogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = barrylogo.png; sourceTree = "<group>"; };
+		2D2FF33920E2A1D300C10003 /* citisso-7dc8.nam.nsroot.net.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "citisso-7dc8.nam.nsroot.net.cer"; sourceTree = "<group>"; };
 		2D5BE09F20CF0F1800C5C4F6 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		2D5BE0A120CF123F00C5C4F6 /* KoreGDiOSDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KoreGDiOSDelegate.swift; sourceTree = "<group>"; };
 		2DA2EF7F20CF075900CC4865 /* default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = default.xcconfig; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 		2DB2455920D2A87E00ED7F70 /* Certs */ = {
 			isa = PBXGroup;
 			children = (
+				2D2FF33920E2A1D300C10003 /* citisso-7dc8.nam.nsroot.net.cer */,
 			);
 			path = Certs;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 			files = (
 				D15041091DE2C4BC00F2F92E /* Messages.plist in Resources */,
 				BB4D2DE81E289FA000A97E99 /* KRETypingCollectionViewCell.xib in Resources */,
+				2D2FF33A20E2A1D300C10003 /* citisso-7dc8.nam.nsroot.net.cer in Resources */,
 				ACB6026F1FD15B5D00A5B815 /* KoreBotSDK.podspec in Resources */,
 				6EA472F01FBD9BA200982255 /* TableTemplateViewController.xib in Resources */,
 				2D5BE0A020CF0F1900C5C4F6 /* Entitlements.plist in Resources */,
