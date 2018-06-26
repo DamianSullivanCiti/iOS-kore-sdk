@@ -7,24 +7,30 @@
 //
 
 import UIKit
+import GD.Runtime
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+
     // MARK: app delegate methos
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        window = UIWindow(frame: UIScreen.main.bounds)
-        if let window = window {
-            window.backgroundColor = UIColor.white
-
-            let appLaunchViewController: AppLaunchViewController = AppLaunchViewController(nibName: "AppLaunchViewController", bundle: nil)
-            let navigationController: UINavigationController = UINavigationController(rootViewController: appLaunchViewController)
-
-            window.rootViewController = navigationController
-            window.makeKeyAndVisible()
-        }
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        if let window = window {
+//            window.backgroundColor = UIColor.white
+//
+//            let appLaunchViewController: AppLaunchViewController = AppLaunchViewController(nibName: "AppLaunchViewController", bundle: nil)
+//            let navigationController: UINavigationController = UINavigationController(rootViewController: appLaunchViewController)
+//
+//            window.rootViewController = navigationController
+//            window.makeKeyAndVisible()
+//        }
+        
+        KoreGDiOSDelegate.sharedInstance.appDelegate = self
+        GDiOS.sharedInstance().authorize(KoreGDiOSDelegate.sharedInstance)
+        
         return true
     }
     
@@ -49,6 +55,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        
+    }
+    
+    // GD
+    func didAuthorize() -> Void {
+        print(#file, #function)
         
     }
 }

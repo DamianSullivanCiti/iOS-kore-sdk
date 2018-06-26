@@ -28,6 +28,22 @@
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>citisso-7dc8.nam.nsroot.net</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.0</string>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSRequiresCertificateTransparency</key>
+				<false/>
+			</dict>
+		</dict>
 	</dict>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow access to microphone.</string>
@@ -50,5 +66,34 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>GDApplicationID</key>
+	<string>${GD_ENTITLEMENT_ID}</string>
+	<key>GDApplicationVersion</key>
+	<string>${GD_ENTITLEMENT_VERSION}</string>
+	<key>GDConsoleLogger</key>
+	<array>
+		<string>${GD_LOGGING_FILTER_0}</string>
+		<string>${GD_LOGGING_FILTER_1}</string>
+		<string>${GD_LOGGING_FILTER_2}</string>
+		<string>${GD_LOGGING_FILTER_3}</string>
+	</array>
+	<key>GDLibraryMode</key>
+	<string>GDEnterprise</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>${URL_IDENTIFIER}</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>${URL_SCHEME_ITEM_0}</string>
+				<string>${URL_SCHEME_ITEM_1}</string>
+				<string>${URL_SCHEME_ITEM_2}</string>
+				<string>${URL_SCHEME_ITEM_3}</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Enables authentication without a password.</string>
 </dict>
 </plist>
