@@ -38,6 +38,7 @@
 		2DD9C0F720CF04500053D5B0 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DD9C0F620CF044F0053D5B0 /* LocalAuthentication.framework */; };
 		2DD9C0F920CF04930053D5B0 /* GDAssets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2DD9C0F820CF048E0053D5B0 /* GDAssets.bundle */; };
 		2E1E49F68222AAA4C970168B /* Pods_KoreBotSDKDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E1812F1242FE88925056F7C /* Pods_KoreBotSDKDemo.framework */; };
+		59EDC2C820E2D870004E1D41 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EDC2C720E2D870004E1D41 /* libstdc++.6.0.9.tbd */; };
 		6E14F4691F2F4D8600F5C149 /* BotMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E14F4681F2F4D8600F5C149 /* BotMessagesView.swift */; };
 		6E202A581FBB22AF002A608C /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E202A571FBB22AF002A608C /* BalloonMarker.swift */; };
 		6E202A5C1FBC7B33002A608C /* CustomCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E202A5B1FBC7B33002A608C /* CustomCollectionViewLayout.swift */; };
@@ -137,6 +138,7 @@
 		2DD9C0F620CF044F0053D5B0 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		2DD9C0F820CF048E0053D5B0 /* GDAssets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GDAssets.bundle; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/GD.framework/Versions/A/Resources/GDAssets.bundle; sourceTree = DEVELOPER_DIR; };
 		51D2300D7315E548B03ED7F4 /* Pods-KoreBotSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreBotSDKDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-KoreBotSDKDemo/Pods-KoreBotSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
+		59EDC2C720E2D870004E1D41 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		6E14F4681F2F4D8600F5C149 /* BotMessagesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotMessagesView.swift; sourceTree = "<group>"; };
 		6E1812F1242FE88925056F7C /* Pods_KoreBotSDKDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreBotSDKDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E202A571FBB22AF002A608C /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EDC2C820E2D870004E1D41 /* libstdc++.6.0.9.tbd in Frameworks */,
 				2DD9C0F720CF04500053D5B0 /* LocalAuthentication.framework in Frameworks */,
 				2DD9C0F520CF04490053D5B0 /* QuartzCore.framework in Frameworks */,
 				2DD9C0F120CF03D40053D5B0 /* Security.framework in Frameworks */,
@@ -323,6 +326,7 @@
 		A851461715333BEDEFC8310F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59EDC2C720E2D870004E1D41 /* libstdc++.6.0.9.tbd */,
 				2DD9C0F620CF044F0053D5B0 /* LocalAuthentication.framework */,
 				2DD9C0F420CF04490053D5B0 /* QuartzCore.framework */,
 				2DD9C0F020CF03D30053D5B0 /* MobileCoreServices.framework */,
