@@ -29,6 +29,20 @@ Pod::Spec.new do |s|
         ss.dependency 'Starscream', '~> 3.0.2'
         
         ss.ios.frameworks = 'SystemConfiguration'
+        ss.ios.frameworks = 'GD'
+        ss.ios.frameworks = 'libz'
+        ss.ios.frameworks = 'MessageUI'
+        ss.ios.frameworks = 'AdSupport'
+        ss.ios.frameworks = 'QuickLook'
+        ss.ios.frameworks = 'CoreData'
+        ss.ios.frameworks = 'Security'
+        ss.ios.frameworks = 'CFNetwork'
+        ss.ios.frameworks = 'MobileCoreServices'
+        ss.ios.frameworks = 'SystemConfiguration'
+        ss.ios.frameworks = 'CoreTelephony'
+        ss.ios.frameworks = 'QuartzCore'
+        ss.ios.frameworks = 'LocalAuthentication'
+
     end
 
     s.subspec 'UIKit' do |ss|
