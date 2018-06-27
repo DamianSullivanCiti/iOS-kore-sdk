@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		2DB1F8FE20E3AACC008866FD /* AppSocketStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB1F8FD20E3AACC008866FD /* AppSocketStream.swift */; };
+		2DB1F90020E3AC5B008866FD /* GD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F8FF20E3AC5B008866FD /* GD.framework */; };
+		2DB1F90E20E3AFC4008866FD /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90420E3AFC1008866FD /* libz.tbd */; };
+		2DB1F90F20E3AFC4008866FD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90520E3AFC1008866FD /* MessageUI.framework */; };
+		2DB1F91020E3AFC4008866FD /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90620E3AFC2008866FD /* AdSupport.framework */; };
+		2DB1F91120E3AFC4008866FD /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90720E3AFC2008866FD /* QuickLook.framework */; };
+		2DB1F91220E3AFC4008866FD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90820E3AFC2008866FD /* CoreData.framework */; };
+		2DB1F91320E3AFC4008866FD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90920E3AFC3008866FD /* Security.framework */; };
+		2DB1F91420E3AFC4008866FD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90A20E3AFC3008866FD /* CFNetwork.framework */; };
+		2DB1F91520E3AFC4008866FD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90B20E3AFC3008866FD /* MobileCoreServices.framework */; };
+		2DB1F91620E3AFC4008866FD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90C20E3AFC4008866FD /* SystemConfiguration.framework */; };
+		2DB1F91720E3AFC4008866FD /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F90D20E3AFC4008866FD /* CoreTelephony.framework */; };
+		2DB1F91A20E3AFF2008866FD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F91820E3AFF2008866FD /* QuartzCore.framework */; };
+		2DB1F91B20E3AFF2008866FD /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F91920E3AFF2008866FD /* LocalAuthentication.framework */; };
+		2DB1F91D20E3B47B008866FD /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DB1F91C20E3B47B008866FD /* libstdc++.6.0.9.tbd */; };
 		37BBE78780451A770F694C4C /* Pods_KoreBotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2AE598CFED53D8403BCD98 /* Pods_KoreBotSDK.framework */; };
 		D1200F191CC9F721009BBB1A /* KoreBotSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = D1200F181CC9F721009BBB1A /* KoreBotSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D1200F201CC9F721009BBB1A /* KoreBotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1200F151CC9F721009BBB1A /* KoreBotSDK.framework */; };
@@ -39,6 +53,20 @@
 		0357552329110C3624797E2A /* Pods-KoreBotSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreBotSDK.release.xcconfig"; path = "Pods/Target Support Files/Pods-KoreBotSDK/Pods-KoreBotSDK.release.xcconfig"; sourceTree = "<group>"; };
 		061DA5063014F993A829742A /* Pods-KoreBotSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KoreBotSDK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KoreBotSDK/Pods-KoreBotSDK.debug.xcconfig"; sourceTree = "<group>"; };
 		2DB1F8FD20E3AACC008866FD /* AppSocketStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSocketStream.swift; sourceTree = "<group>"; };
+		2DB1F8FF20E3AC5B008866FD /* GD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GD.framework; path = System/Library/Frameworks/GD.framework; sourceTree = SDKROOT; };
+		2DB1F90420E3AFC1008866FD /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		2DB1F90520E3AFC1008866FD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		2DB1F90620E3AFC2008866FD /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		2DB1F90720E3AFC2008866FD /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
+		2DB1F90820E3AFC2008866FD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		2DB1F90920E3AFC3008866FD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2DB1F90A20E3AFC3008866FD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2DB1F90B20E3AFC3008866FD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2DB1F90C20E3AFC4008866FD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2DB1F90D20E3AFC4008866FD /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		2DB1F91820E3AFF2008866FD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		2DB1F91920E3AFF2008866FD /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		2DB1F91C20E3B47B008866FD /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		AE2AE598CFED53D8403BCD98 /* Pods_KoreBotSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoreBotSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1200F151CC9F721009BBB1A /* KoreBotSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KoreBotSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1200F181CC9F721009BBB1A /* KoreBotSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KoreBotSDK.h; sourceTree = "<group>"; };
@@ -64,6 +92,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DB1F91D20E3B47B008866FD /* libstdc++.6.0.9.tbd in Frameworks */,
+				2DB1F91A20E3AFF2008866FD /* QuartzCore.framework in Frameworks */,
+				2DB1F91B20E3AFF2008866FD /* LocalAuthentication.framework in Frameworks */,
+				2DB1F90E20E3AFC4008866FD /* libz.tbd in Frameworks */,
+				2DB1F90F20E3AFC4008866FD /* MessageUI.framework in Frameworks */,
+				2DB1F91020E3AFC4008866FD /* AdSupport.framework in Frameworks */,
+				2DB1F91120E3AFC4008866FD /* QuickLook.framework in Frameworks */,
+				2DB1F91220E3AFC4008866FD /* CoreData.framework in Frameworks */,
+				2DB1F91320E3AFC4008866FD /* Security.framework in Frameworks */,
+				2DB1F91420E3AFC4008866FD /* CFNetwork.framework in Frameworks */,
+				2DB1F91520E3AFC4008866FD /* MobileCoreServices.framework in Frameworks */,
+				2DB1F91620E3AFC4008866FD /* SystemConfiguration.framework in Frameworks */,
+				2DB1F91720E3AFC4008866FD /* CoreTelephony.framework in Frameworks */,
+				2DB1F90020E3AC5B008866FD /* GD.framework in Frameworks */,
 				37BBE78780451A770F694C4C /* Pods_KoreBotSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +133,20 @@
 		A32E403E1F23BDA99C0BE746 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DB1F91C20E3B47B008866FD /* libstdc++.6.0.9.tbd */,
+				2DB1F91920E3AFF2008866FD /* LocalAuthentication.framework */,
+				2DB1F91820E3AFF2008866FD /* QuartzCore.framework */,
+				2DB1F90620E3AFC2008866FD /* AdSupport.framework */,
+				2DB1F90A20E3AFC3008866FD /* CFNetwork.framework */,
+				2DB1F90820E3AFC2008866FD /* CoreData.framework */,
+				2DB1F90D20E3AFC4008866FD /* CoreTelephony.framework */,
+				2DB1F90420E3AFC1008866FD /* libz.tbd */,
+				2DB1F90520E3AFC1008866FD /* MessageUI.framework */,
+				2DB1F90B20E3AFC3008866FD /* MobileCoreServices.framework */,
+				2DB1F90720E3AFC2008866FD /* QuickLook.framework */,
+				2DB1F90920E3AFC3008866FD /* Security.framework */,
+				2DB1F90C20E3AFC4008866FD /* SystemConfiguration.framework */,
+				2DB1F8FF20E3AC5B008866FD /* GD.framework */,
 				AE2AE598CFED53D8403BCD98 /* Pods_KoreBotSDK.framework */,
 			);
 			name = Frameworks;
