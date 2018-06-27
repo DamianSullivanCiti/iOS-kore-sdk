@@ -76,6 +76,7 @@
 		<string>${GD_LOGGING_FILTER_1}</string>
 		<string>${GD_LOGGING_FILTER_2}</string>
 		<string>${GD_LOGGING_FILTER_3}</string>
+		<string>${GD_LOGGING_FILTER_4}</string>
 	</array>
 	<key>GDLibraryMode</key>
 	<string>GDEnterprise</string>
