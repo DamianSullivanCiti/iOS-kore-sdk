@@ -40,4 +40,3 @@ GD_LOGGING_FILTER_0                 = GDFilterDetailed
 GD_LOGGING_FILTER_1                 = GDFilterInfo
 GD_LOGGING_FILTER_2                 = GDFilterWarnings
 GD_LOGGING_FILTER_3                 = GDFilterErrors
-GD_LOGGING_FILTER_4                 = GDFilterNone
