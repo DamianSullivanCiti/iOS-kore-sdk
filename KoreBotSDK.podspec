@@ -28,20 +28,15 @@ Pod::Spec.new do |s|
         ss.dependency 'AFNetworking', '3.2.0'
         ss.dependency 'Starscream', '~> 3.0.2'
         
-        ss.ios.frameworks = 'SystemConfiguration'
-        ss.ios.frameworks = 'GD'
-        ss.ios.frameworks = 'libz'
-        ss.ios.frameworks = 'MessageUI'
-        ss.ios.frameworks = 'AdSupport'
-        ss.ios.frameworks = 'QuickLook'
-        ss.ios.frameworks = 'CoreData'
-        ss.ios.frameworks = 'Security'
-        ss.ios.frameworks = 'CFNetwork'
-        ss.ios.frameworks = 'MobileCoreServices'
-        ss.ios.frameworks = 'SystemConfiguration'
-        ss.ios.frameworks = 'CoreTelephony'
-        ss.ios.frameworks = 'QuartzCore'
-        ss.ios.frameworks = 'LocalAuthentication'
+        ss.ios.frameworks = 'SystemConfiguration', 'GD', 'MessageUI', 'AdSupport', 'QuickLook', 'CoreData', 'Security', 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration', 'CoreTelephony', 'QuartzCore', 'LocalAuthentication'
+
+        ss.ios.libraries = 'stdc++.6.0.9', 'z'
+
+        ss.pod_target_xcconfig = { 'FIPS_PACKAGE' => '$(CURRENT_ARCH).sdk',
+            'LDPLUSPLUS' => '~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld', 
+            'LD' => '~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld', 
+            'ENABLE_BITCODE' => 'NO' 
+        }
 
     end
 

@@ -74,7 +74,7 @@
 		D1200F1F1CC9F721009BBB1A /* KoreBotSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KoreBotSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1200F241CC9F721009BBB1A /* KoreBotSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KoreBotSDKTests.swift; sourceTree = "<group>"; };
 		D1200F261CC9F721009BBB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D1200F311CC9F797009BBB1A /* KoreBotSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KoreBotSDK.podspec; sourceTree = "<group>"; };
+		D1200F311CC9F797009BBB1A /* KoreBotSDK.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = KoreBotSDK.podspec; path = ../../../KoreBotSDK.podspec; sourceTree = "<group>"; };
 		D14AAC981CFD897300AEF5FD /* BotClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotClient.swift; sourceTree = "<group>"; };
 		D14AAC9A1CFD897300AEF5FD /* HTTPRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequestManager.swift; sourceTree = "<group>"; };
 		D14AAC9C1CFD897300AEF5FD /* RTMPersistentConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTMPersistentConnection.swift; sourceTree = "<group>"; };
