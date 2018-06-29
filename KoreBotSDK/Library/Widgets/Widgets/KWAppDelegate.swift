@@ -8,7 +8,7 @@
 
 import UIKit
 
-@UIApplicationMain
+//@UIApplicationMain
 class KWAppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
