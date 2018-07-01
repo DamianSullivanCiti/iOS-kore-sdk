@@ -9,9 +9,10 @@
 import UIKit
 import AVFoundation
 import KoreBotSDK
+import Speech
 import TOWebViewController
 
-class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, ComposeBarViewDelegate, KREGrowingTextViewDelegate {
+class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, ComposeBarViewDelegate, KREGrowingTextViewDelegate, KoreSpeechRecognizerDelegate {
     
     // MARK: properties
     var thread: KREThread!
@@ -39,7 +40,9 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
 
     //let sttClient: GoogleASRService = GoogleASRService(api_key: SDKConfiguration.speechConfig.API_KEY)
     var speechSynthesizer: AVSpeechSynthesizer!
-    
+
+    private let speechRecognizer = KoreSpeechRecognizer()
+
     // MARK: init
     init(thread: KREThread!) {
         super.init(nibName: "ChatMessagesViewController", bundle: nil)
@@ -60,8 +63,8 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
         self.configureQuickReplyView()
         self.configureTypingStatusView()
         self.configureBotClient()
-        //self.configureSTTClient()
-        
+        self.configureSTTClient()
+
         isSpeakingEnabled = true
         self.speechSynthesizer = AVSpeechSynthesizer()
     }
@@ -100,7 +103,7 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
             self.botClient.disconnect()
         }
         self.deConfigureBotClient()
-        //self.deConfigureSTTClient()
+        self.deConfigureSTTClient()
         self.stopTTS()
         self.composeView.growingTextView.viewDelegate = nil
         self.composeView.delegate = nil
@@ -193,9 +196,16 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
         self.audioComposeView.voiceRecordingStarted = { [weak self] (composeBar) in
             self?.stopTTS()
             //self?.sttClient.start()
+            do {
+                try self?.speechRecognizer.startRecording()
+            } catch {
+                print("Failed to start recording.")
+            }
         }
         self.audioComposeView.voiceRecordingStopped = { [weak self] (composeBar) in
             //self?.sttClient.stop()
+
+            self?.speechRecognizer.stopRecording()
         }
         self.audioComposeView.getAudioPeakOutputPower = { () in
             return 0.0
@@ -425,6 +435,14 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
                 }
             }
         }
+    }
+
+    func configureSTTClient() {
+        speechRecognizer.delegate = self
+    }
+
+    func deConfigureSTTClient() {
+        speechRecognizer.delegate = nil
     }
  /*
     func configureSTTClient() {
@@ -723,6 +741,7 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
 //        GoogleASRService.checkAudioRecordPermission(block: { [weak self] in
 //            self?.speechToTextButtonAction()
 //        })
+        self.speechToTextButtonAction()
     }
     
     func composeBarViewDidBecomeFirstResponder(_: ComposeBarView) {
@@ -796,5 +815,37 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
     }
     @objc func reloadTable(notification:Notification){
         botMessagesView.tableView.reloadData()
+    }
+
+    // MARK: KoreSpeechRecognitionDelegate
+
+    func speechRecognitionFinished(transcription:String) {
+        composeView.setText(transcription)
+        if !composeView.isKeyboardEnabled {
+            audioComposeView.stopRecording()
+            sendTextMessage(transcription)
+            composeView.setText("")
+            composeViewBottomConstraint.isActive = false
+            composeBarContainerHeightConstraint.isActive = true
+            composeBarContainerView.isHidden = true
+        }
+    }
+
+    func speechRecognitionPartialResult(transcription:String) {
+        composeView.setText(transcription)
+        composeBarContainerHeightConstraint.isActive = false
+        composeViewBottomConstraint.isActive = true
+        composeBarContainerView.isHidden = false
+    }
+
+    func speechRecognitionTimedOut() {
+
+    }
+
+    func speechRecognitionRecordingNotAuthorized() {
+        let alert = UIAlertController(title: "Not authorized", message: "Microphone and speech recognition access must be enabled. Go to iOS privacy settings.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+
+        present(alert, animated: true, completion: nil)
     }
 }

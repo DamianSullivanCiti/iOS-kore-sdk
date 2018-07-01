@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Speech
 
 class AudioComposeView: UIView {
     
@@ -30,7 +31,7 @@ class AudioComposeView: UIView {
     public var voiceRecordingStarted: ((_ composeView: AudioComposeView?) -> Void)!
     public var voiceRecordingStopped: ((_ composeView: AudioComposeView?) -> Void)!
     public var onKeyboardButtonAction: (() -> Void)!
-    
+
     convenience init() {
         self.init(frame: CGRect.zero)
     }
@@ -177,6 +178,36 @@ class AudioComposeView: UIView {
 //                self?.isActive = true
 //                self?.startAudioRecording()
 //            })
+
+            SFSpeechRecognizer.requestAuthorization { (authStatus) in  //4
+
+                var isButtonEnabled = false
+
+                switch authStatus {  //5
+                case .authorized:
+                    isButtonEnabled = true
+
+                case .denied:
+                    isButtonEnabled = false
+                    print("User denied access to speech recognition")
+
+                case .restricted:
+                    isButtonEnabled = false
+                    print("Speech recognition restricted on this device")
+
+                case .notDetermined:
+                    isButtonEnabled = false
+                    print("Speech recognition not yet authorized")
+                }
+
+                OperationQueue.main.addOperation() {
+                    self.isActive = isButtonEnabled
+                    if self.isActive {
+                        self.startAudioRecording()
+                    }
+                }
+            }
+
         } else {
             self.isActive = false
             self.stopAudioRecording()
@@ -200,8 +231,8 @@ class AudioComposeView: UIView {
             NotificationCenter.default.post(name: Notification.Name(startSpeakingNotification), object: nil)
             isSpeakingEnabled = true
         }
-//        isSpeakingEnabled = !isSpeakingEnabled
-//        self.enablePlayback(enable: isSpeakingEnabled)
+        isSpeakingEnabled = !isSpeakingEnabled
+        self.enablePlayback(enable: isSpeakingEnabled)
     }
     
     fileprivate func startAudioRecording(){
@@ -283,4 +314,5 @@ class AudioComposeView: UIView {
     func randomInt(min: Int, max:Int) -> Int {
         return min + Int(arc4random_uniform(UInt32(max - min + 1)))
     }
+
 }
