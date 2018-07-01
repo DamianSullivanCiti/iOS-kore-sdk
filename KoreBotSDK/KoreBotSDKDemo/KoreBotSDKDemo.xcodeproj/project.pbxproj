@@ -1056,7 +1056,7 @@
 				"DEBUG_ACTIVITY_MODE[sdk=iphonesimulator*]" = "";
 				DEVELOPMENT_TEAM = PQE9C3WA82;
 				INFOPLIST_FILE = KoreBotSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEV_ENV\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1078,7 +1078,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PQE9C3WA82;
 				INFOPLIST_FILE = KoreBotSDKDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-DDEV_ENV\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
