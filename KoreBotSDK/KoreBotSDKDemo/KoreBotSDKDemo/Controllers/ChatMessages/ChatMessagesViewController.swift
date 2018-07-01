@@ -70,24 +70,10 @@ class ChatMessagesViewController: UIViewController, BotMessagesViewDelegate, Com
         super.viewWillAppear(animated)
         self.addNotifications()
     }
-    
-    override open func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
+
     override open func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         self.removeNotifications()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    override func viewWillLayoutSubviews() {
-        NSLog("viewWillLayoutSubviews")
-        super.viewWillLayoutSubviews()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
