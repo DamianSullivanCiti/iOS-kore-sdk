@@ -35,8 +35,7 @@ Pod::Spec.new do |s|
         ss.pod_target_xcconfig = { 'FIPS_PACKAGE' => '$(CURRENT_ARCH).sdk',
             'LDPLUSPLUS' => '~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld', 
             'LD' => '~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld', 
-            'ENABLE_BITCODE' => 'NO',
-            'MACH_O_TYPE' => 'staticlib'
+            'ENABLE_BITCODE' => 'NO'
         }
 
     end
