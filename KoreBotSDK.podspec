@@ -30,9 +30,14 @@ Pod::Spec.new do |s|
         
         ss.ios.frameworks = 'SystemConfiguration', 'GD', 'MessageUI', 'AdSupport', 'QuickLook', 'CoreData', 'Security', 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration', 'CoreTelephony', 'QuartzCore', 'LocalAuthentication'
 
-        ss.ios.libraries = 'stdc++', 'z'
+        ss.ios.libraries = 'stdc++.6.0.9', 'z'
 
-        ss.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO'}
+        ss.pod_target_xcconfig = { 'FIPS_PACKAGE' => '$(CURRENT_ARCH).sdk',
+            'LDPLUSPLUS' => '~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld', 
+            'LD' => '~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld', 
+            'ENABLE_BITCODE' => 'NO',
+            'MACH_O_TYPE' => 'staticlib'
+        }
 
     end
 
