@@ -36,7 +36,7 @@ Pod::Spec.new do |s|
             'LDPLUSPLUS' => '~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld', 
             'LD' => '~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld', 
             'ENABLE_BITCODE' => 'NO',
-            'MAC_O_TYPE' => 'mh_dylib'
+            'MACH_O_TYPE' => 'staticlib'
         }
 
     end
