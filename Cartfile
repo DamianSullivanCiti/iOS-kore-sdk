@@ -1,0 +1,11 @@
+# Library
+github "Mantle/Mantle" ~> 2.0.2
+github "daltoniam/Starscream" ~> 3.0.5
+github "AFNetworking/AFNetworking" ~> 3.2.0
+
+# Demo Project
+github "Cocoanetics/DTCoreText" ~> 1.6.15
+github "Cocoanetics/DTFoundation"
+github "danielgindi/Charts" == 3.0.5
+github "TimOliver/TOWebViewController" ~> 2.2.7
+

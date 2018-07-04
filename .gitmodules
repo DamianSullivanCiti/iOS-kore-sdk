@@ -1,0 +1,9 @@
+[submodule "Carthage/Checkouts/Starscream"]
+	path = Carthage/Checkouts/Starscream
+	url = https://github.com/daltoniam/Starscream.git
+[submodule "Carthage/Checkouts/AFNetworking"]
+	path = Carthage/Checkouts/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
+[submodule "Carthage/Checkouts/Mantle"]
+	path = Carthage/Checkouts/Mantle
+	url = https://github.com/Mantle/Mantle.git

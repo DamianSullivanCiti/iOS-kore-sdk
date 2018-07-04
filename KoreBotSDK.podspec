@@ -1,40 +1,36 @@
+#
+# Be sure to run `pod lib lint KoreBotSDK.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+#
+
 Pod::Spec.new do |s|
-    s.name = 'KoreBotSDK'
-    s.version = '0.2'
-    s.license  = {:type => 'MIT', :file => 'KoreBotSDK/LICENSE' }
-    s.summary = 'Citi customisation of KoreSDK'
-    s.homepage = 'https://kore.ai'
-    s.author = {'Srinivas Vasadi' => 'srinivas.vasadi@kore.com'}
-    s.source = {:git => 'https://github.com/DamianSullivanCiti/iOS-kore-sdk.git', :tag => s.version, :submodules => true }
-    s.requires_arc = true
 
-    s.public_header_files = 'KoreBotSDK/Library/KoreBotSDK/KoreBotSDK/KoreBotSDK.h'
-    s.source_files = 'KoreBotSDK/Library/KoreBotSDK/KoreBotSDK/KoreBotSDK.h'
+  s.name         = "KoreBotSDK"
+  s.version      = "0.2.0"
+  s.summary      = "Citi customisations of KoreBotSDK."
+  s.homepage     = "https://github.com/damianjsullivan/KoreBotSDK"
+  s.license      = { :type => "MIT", :file => "LICENSE" }
+  s.author       = { "DamianSullivanCiti" => "damian.sullivan@citi.com" }
+  s.platform     = :ios, "8.0"
+  s.source       = { :git => "https://github.com/damiansullivanciti/KoreBotSDK.git", :tag => "#{s.version}" }
+  s.source_files = "Sources/**/*"
+  s.requires_arc = true
+  s.swift_version = '4.0'
 
-    s.ios.deployment_target = '8.0'
-    s.swift_version = '4.0'
+  s.dependency "Mantle", "~> 2.0.2"
+  s.dependency "Starscream", "~> 3.0.5"
+  s.dependency "AFNetworking", "~> 3.2.0"
 
-    s.subspec 'Library' do |ss|
-        ss.ios.deployment_target = '8.0'
-        ss.source_files = 'KoreBotSDK/Library/KoreBotSDK/KoreBotSDK/**/*.{h,m,swift}', 'KoreBotSDK/Library/Widgets/Widgets/**/*.{h,m,txt,swift}'
+  s.ios.frameworks = 'SystemConfiguration', 'GD', 'MessageUI', 'AdSupport', 'QuickLook', 'CoreData', 'Security', 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration', 'CoreTelephony', 'QuartzCore', 'LocalAuthentication'
+  s.ios.libraries = 'stdc++', 'z'
 
-        ss.exclude_files = 'KoreBotSDK/Library/KoreBotSDK/KoreBotSDK/KoreBotSDK.{h}'
-        ss.exclude_files = 'KoreBotSDK/KoreBotSDKDemo/*.{*}'
-        ss.exclude_files = 'KoreBotSDK/Library/SpeechToText/*.{*}'
-        ss.exclude_files = 'KoreBotSDK/Library/TextParser/*.{*}'
-        ss.exclude_files = 'KoreBotSDK/Library/Widgets/*.{*}'
-        
-        ss.resource_bundles = {
-            'Widgets' => ['KoreBotSDK/Library/Widgets/Widgets/**/*.xib']
-        }
-        
-        ss.dependency 'Mantle', '2.0.2'
-        ss.dependency 'AFNetworking', '3.2.0'
-        ss.dependency 'Starscream', '~> 3.0.2'
+  s.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO'}
 
-        ss.ios.frameworks = 'SystemConfiguration', 'GD', 'MessageUI', 'AdSupport', 'QuickLook', 'CoreData', 'Security', 'CFNetwork', 'MobileCoreServices', 'SystemConfiguration', 'CoreTelephony', 'QuartzCore', 'LocalAuthentication'
-        ss.ios.libraries = 'stdc++', 'z'
+  s.resource_bundles = {
+    'Widgets' => ['Sources/Widgets/**/*.xib']
+  }
 
-        ss.pod_target_xcconfig = { 'ENABLE_BITCODE' => 'NO'}
-    end
 end
