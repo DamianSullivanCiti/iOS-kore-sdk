@@ -16,8 +16,7 @@ Pod::Spec.new do |s|
 
     s.subspec 'Library' do |ss|
         ss.ios.deployment_target = '8.0'
-        ss.source_files = 'KoreBotSDK/Library/KoreBotSDK/KoreBotSDK/**/*.{h,m,swift}'
-        ss.source_files = 'KoreBotSDK/Library/Widgets/Widgets/**/*.{h,m,txt,swift}'
+        ss.source_files = 'KoreBotSDK/Library/KoreBotSDK/KoreBotSDK/**/*.{h,m,swift}', 'KoreBotSDK/Library/Widgets/Widgets/**/*.{h,m,txt,swift}'
 
         ss.exclude_files = 'KoreBotSDK/Library/KoreBotSDK/KoreBotSDK/KoreBotSDK.{h}'
         ss.exclude_files = 'KoreBotSDK/KoreBotSDKDemo/*.{*}'
