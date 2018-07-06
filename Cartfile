@@ -1,5 +1,5 @@
 # Library
-github "Mantle/Mantle" ~> 2.0.2
+github "Mantle/Mantle" ~> 2.1.0
 github "daltoniam/Starscream" ~> 3.0.5
 github "AFNetworking/AFNetworking" ~> 3.2.0
 
