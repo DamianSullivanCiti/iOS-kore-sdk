@@ -136,12 +136,38 @@
 		57A2889616212E61810B521A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F954AC9FC7F931F29A1930 /* AFNetworking.framework */; };
 		59CB193B20EF005500B466C4 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CB193A20EF005500B466C4 /* libstdc++.6.0.9.tbd */; };
 		59CB193C20EF006100B466C4 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CB193A20EF005500B466C4 /* libstdc++.6.0.9.tbd */; };
+		59CB193D20EF04D200B466C4 /* KoreBotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85E23C21FA8288D004CD008 /* KoreBotSDK.framework */; };
+		59CB193E20EF04D200B466C4 /* KoreBotSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85E23C21FA8288D004CD008 /* KoreBotSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6B7BA86CBADA02EBF2C82591 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875D3F9315170A5AED643AB6 /* Mantle.framework */; };
 		B85E23FE1FA82D8A004CD008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E23F61FA82D8A004CD008 /* AppDelegate.swift */; };
 		B85E23FF1FA82D8A004CD008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B85E23F71FA82D8A004CD008 /* Assets.xcassets */; };
 		B85E24001FA82D8A004CD008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85E23F81FA82D8A004CD008 /* LaunchScreen.storyboard */; };
 		ECCC0B75D209A94D8F77E5DC /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE7AD693816794FE761863A /* Starscream.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		59CB193F20EF04D200B466C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B85E23B91FA8288D004CD008 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B85E23C11FA8288D004CD008;
+			remoteInfo = KoreBotSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		59CB194120EF04D200B466C4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				59CB193E20EF04D200B466C4 /* KoreBotSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D6A99B020ECF64900038721 /* AppSocketStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSocketStream.swift; sourceTree = "<group>"; };
@@ -319,6 +345,7 @@
 				2DF0AB5020EE588D00436075 /* MobileCoreServices.framework in Frameworks */,
 				2DF0AB4F20EE588500436075 /* MessageUI.framework in Frameworks */,
 				2D6A9B1820ED166E00038721 /* CoreData.framework in Frameworks */,
+				59CB193D20EF04D200B466C4 /* KoreBotSDK.framework in Frameworks */,
 				2D6A9B0F20ED11F200038721 /* TOWebViewController.framework in Frameworks */,
 				2D6A9B1720ED165600038721 /* AFNetworking.framework in Frameworks */,
 				2D6A9B0A20ED11E500038721 /* Charts.framework in Frameworks */,
@@ -902,10 +929,12 @@
 				B85E23CE1FA82918004CD008 /* Frameworks */,
 				B85E23CF1FA82918004CD008 /* Resources */,
 				2D6A9B0820ED112900038721 /* ShellScript */,
+				59CB194120EF04D200B466C4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				59CB194020EF04D200B466C4 /* PBXTargetDependency */,
 			);
 			name = KoreBotSDKDemo;
 			productName = KoreBotSDKDemo;
@@ -1114,6 +1143,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		59CB194020EF04D200B466C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B85E23C11FA8288D004CD008 /* KoreBotSDK */;
+			targetProxy = 59CB193F20EF04D200B466C4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B85E23F81FA82D8A004CD008 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1240,6 +1277,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FIPS_PACKAGE = "$(CURRENT_ARCH).sdk";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -1248,6 +1286,8 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/KoreBotSDK-prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD = "~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld";
+				LDPLUSPLUS = "~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citi.mcoe.korebotsdk;
@@ -1268,6 +1308,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FIPS_PACKAGE = "$(CURRENT_ARCH).sdk";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Frameworks",
@@ -1276,6 +1317,8 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/KoreBotSDK-prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD = "~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld";
+				LDPLUSPLUS = "~/Library/Application Support/BlackBerry/Good.platform/iOS/FIPS_module/$FIPS_PACKAGE/bin/gd_fipsld";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citi.mcoe.korebotsdk;
