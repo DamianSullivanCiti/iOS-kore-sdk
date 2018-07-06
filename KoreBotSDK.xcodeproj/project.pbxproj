@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D0F0FB020EEE8A5003EB9CD /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99DC20ECFBD800038721 /* libstdc++.tbd */; };
+		2D0F0FB120EEE8AC003EB9CD /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE7AD693816794FE761863A /* Starscream.framework */; };
+		2D0F0FB220EEE8B4003EB9CD /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875D3F9315170A5AED643AB6 /* Mantle.framework */; };
 		2D6A99BF20ECF64A00038721 /* AppSocketStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A99B020ECF64900038721 /* AppSocketStream.swift */; };
 		2D6A99C020ECF64A00038721 /* BotClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A99B120ECF64900038721 /* BotClient.swift */; };
 		2D6A99C120ECF64A00038721 /* HTTPRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A99B320ECF64900038721 /* HTTPRequestManager.swift */; };
@@ -304,8 +307,10 @@
 			files = (
 				2DF0AB6120EE76E400436075 /* KoreBotSDK.framework in Frameworks */,
 				2DF0AB5320EE58D100436075 /* LocalAuthentication.framework in Frameworks */,
+				2D0F0FB020EEE8A5003EB9CD /* libstdc++.tbd in Frameworks */,
 				2DF0AB5220EE58BE00436075 /* SystemConfiguration.framework in Frameworks */,
 				2DF0AB5120EE58B500436075 /* CoreTelephony.framework in Frameworks */,
+				2D0F0FB120EEE8AC003EB9CD /* Starscream.framework in Frameworks */,
 				2DF0AB5020EE588D00436075 /* MobileCoreServices.framework in Frameworks */,
 				2DF0AB4F20EE588500436075 /* MessageUI.framework in Frameworks */,
 				2D6A9B1820ED166E00038721 /* CoreData.framework in Frameworks */,
@@ -313,6 +318,7 @@
 				2D6A9B1720ED165600038721 /* AFNetworking.framework in Frameworks */,
 				2D6A9B0A20ED11E500038721 /* Charts.framework in Frameworks */,
 				2D6A9B0E20ED11F200038721 /* DTCoreText.framework in Frameworks */,
+				2D0F0FB220EEE8B4003EB9CD /* Mantle.framework in Frameworks */,
 				2D6A9B1020ED11F200038721 /* DTFoundation.framework in Frameworks */,
 				2D6A9B1920ED168500038721 /* libz.tbd in Frameworks */,
 				2D6A9B1620ED165000038721 /* GD.framework in Frameworks */,
@@ -1228,10 +1234,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/KoreBotSDK-prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
@@ -1251,10 +1262,15 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Supporting Files/KoreBotSDK-prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks";
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_BUNDLE_IDENTIFIER = "";
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
@@ -1275,6 +1291,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1294,6 +1311,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
