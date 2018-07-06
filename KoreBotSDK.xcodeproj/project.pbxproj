@@ -134,6 +134,8 @@
 		2DF0AB5420EE69FE00436075 /* KoreBotSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5012467752FE905DD0F3BF68 /* KoreBotSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DF0AB6120EE76E400436075 /* KoreBotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85E23C21FA8288D004CD008 /* KoreBotSDK.framework */; };
 		57A2889616212E61810B521A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F954AC9FC7F931F29A1930 /* AFNetworking.framework */; };
+		59CB193B20EF005500B466C4 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CB193A20EF005500B466C4 /* libstdc++.6.0.9.tbd */; };
+		59CB193C20EF006100B466C4 /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 59CB193A20EF005500B466C4 /* libstdc++.6.0.9.tbd */; };
 		6B7BA86CBADA02EBF2C82591 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875D3F9315170A5AED643AB6 /* Mantle.framework */; };
 		B85E23FE1FA82D8A004CD008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E23F61FA82D8A004CD008 /* AppDelegate.swift */; };
 		B85E23FF1FA82D8A004CD008 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B85E23F71FA82D8A004CD008 /* Assets.xcassets */; };
@@ -271,6 +273,7 @@
 		2DF0AB6220EEA2DE00436075 /* KoreBotSDK-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KoreBotSDK-prefix.pch"; sourceTree = "<group>"; };
 		5012467752FE905DD0F3BF68 /* KoreBotSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KoreBotSDK.h; sourceTree = "<group>"; };
 		53F954AC9FC7F931F29A1930 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		59CB193A20EF005500B466C4 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		6AE7AD693816794FE761863A /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		875D3F9315170A5AED643AB6 /* Mantle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mantle.framework; path = Carthage/Build/iOS/Mantle.framework; sourceTree = "<group>"; };
 		B85E23C21FA8288D004CD008 /* KoreBotSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KoreBotSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59CB193B20EF005500B466C4 /* libstdc++.6.0.9.tbd in Frameworks */,
 				2D6A99DD20ECFBD800038721 /* libstdc++.tbd in Frameworks */,
 				2D6A99DB20ECF8B900038721 /* MessageUI.framework in Frameworks */,
 				2D6A99D720ECF89B00038721 /* MobileCoreServices.framework in Frameworks */,
@@ -305,6 +309,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59CB193C20EF006100B466C4 /* libstdc++.6.0.9.tbd in Frameworks */,
 				2DF0AB6120EE76E400436075 /* KoreBotSDK.framework in Frameworks */,
 				2DF0AB5320EE58D100436075 /* LocalAuthentication.framework in Frameworks */,
 				2D0F0FB020EEE8A5003EB9CD /* libstdc++.tbd in Frameworks */,
@@ -836,6 +841,7 @@
 		E9FA594AC6B2012D4A517F14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				59CB193A20EF005500B466C4 /* libstdc++.6.0.9.tbd */,
 				53F954AC9FC7F931F29A1930 /* AFNetworking.framework */,
 				2D6A9B0920ED11E400038721 /* Charts.framework */,
 				2D6A99D620ECF89B00038721 /* CoreData.framework */,
