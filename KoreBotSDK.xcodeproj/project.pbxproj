@@ -22,13 +22,11 @@
 		2D6A99C820ECF64A00038721 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A99BD20ECF64900038721 /* MessageModel.swift */; };
 		2D6A99C920ECF64A00038721 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A99BE20ECF64900038721 /* UserModel.swift */; };
 		2D6A99CB20ECF72800038721 /* GD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99CA20ECF72800038721 /* GD.framework */; };
-		2D6A99CD20ECF79700038721 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99CC20ECF79700038721 /* libz.tbd */; };
 		2D6A99D120ECF84C00038721 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99D020ECF84C00038721 /* LocalAuthentication.framework */; };
 		2D6A99D320ECF87300038721 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99D220ECF87300038721 /* SystemConfiguration.framework */; };
 		2D6A99D720ECF89B00038721 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99D420ECF89B00038721 /* MobileCoreServices.framework */; };
 		2D6A99D820ECF89B00038721 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99D520ECF89B00038721 /* CoreTelephony.framework */; };
 		2D6A99DB20ECF8B900038721 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99DA20ECF8B900038721 /* MessageUI.framework */; };
-		2D6A99DD20ECFBD800038721 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99DC20ECFBD800038721 /* libstdc++.tbd */; };
 		2D6A9A0120ECFF5800038721 /* KRECardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A99E720ECFF5800038721 /* KRECardView.swift */; };
 		2D6A9A0220ECFF5800038721 /* KRECarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A99E820ECFF5800038721 /* KRECarouselView.swift */; };
 		2D6A9A0320ECFF5800038721 /* ButtonWidgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A99EA20ECFF5800038721 /* ButtonWidgetViewController.swift */; };
@@ -52,7 +50,6 @@
 		2D6A9AAB20ED0C7900038721 /* MultiImageBubbleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A9A5120ED0C7900038721 /* MultiImageBubbleView.xib */; };
 		2D6A9AB020ED0C7900038721 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A9A5A20ED0C7900038721 /* CustomCollectionViewCell.xib */; };
 		2D6A9AD020ED0CFA00038721 /* KoreGDiOSDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A9ACE20ED0CFA00038721 /* KoreGDiOSDelegate.swift */; };
-		2D6A9AD120ED0CFA00038721 /* default.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A9ACF20ED0CFA00038721 /* default.xcconfig */; };
 		2D6A9AD220ED0D0600038721 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A9A3820ED0C7900038721 /* Common.swift */; };
 		2D6A9AD320ED0D5700038721 /* AppLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A9A2220ED0C7800038721 /* AppLaunchViewController.swift */; };
 		2D6A9AD420ED0D5700038721 /* BotMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A9A2520ED0C7800038721 /* BotMessagesView.swift */; };
@@ -126,13 +123,15 @@
 		2D6A9B2020ED17C200038721 /* Messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A9A1C20ED0C7800038721 /* Messages.plist */; };
 		2D6A9B2120ED17C700038721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D6A9A1E20ED0C7800038721 /* Assets.xcassets */; };
 		2D6A9B2220ED17D600038721 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D6A9A7720ED0C7900038721 /* DataModel.xcdatamodeld */; };
+		2D74116E20EF940500509EFA /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D74116C20EF93FC00509EFA /* libstdc++.6.0.9.tbd */; };
+		2D74116F20EF9CF800509EFA /* KoreBotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85E23C21FA8288D004CD008 /* KoreBotSDK.framework */; };
+		2D74117020EF9CF800509EFA /* KoreBotSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B85E23C21FA8288D004CD008 /* KoreBotSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DF0AB4F20EE588500436075 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99DA20ECF8B900038721 /* MessageUI.framework */; };
 		2DF0AB5020EE588D00436075 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99D420ECF89B00038721 /* MobileCoreServices.framework */; };
 		2DF0AB5120EE58B500436075 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99D520ECF89B00038721 /* CoreTelephony.framework */; };
 		2DF0AB5220EE58BE00436075 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99D220ECF87300038721 /* SystemConfiguration.framework */; };
 		2DF0AB5320EE58D100436075 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D6A99D020ECF84C00038721 /* LocalAuthentication.framework */; };
 		2DF0AB5420EE69FE00436075 /* KoreBotSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 5012467752FE905DD0F3BF68 /* KoreBotSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DF0AB6120EE76E400436075 /* KoreBotSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B85E23C21FA8288D004CD008 /* KoreBotSDK.framework */; };
 		57A2889616212E61810B521A /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53F954AC9FC7F931F29A1930 /* AFNetworking.framework */; };
 		6B7BA86CBADA02EBF2C82591 /* Mantle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 875D3F9315170A5AED643AB6 /* Mantle.framework */; };
 		B85E23FE1FA82D8A004CD008 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85E23F61FA82D8A004CD008 /* AppDelegate.swift */; };
@@ -140,6 +139,30 @@
 		B85E24001FA82D8A004CD008 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85E23F81FA82D8A004CD008 /* LaunchScreen.storyboard */; };
 		ECCC0B75D209A94D8F77E5DC /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AE7AD693816794FE761863A /* Starscream.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D74117120EF9CF800509EFA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B85E23B91FA8288D004CD008 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B85E23C11FA8288D004CD008;
+			remoteInfo = KoreBotSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2D74117320EF9CF900509EFA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2D74117020EF9CF800509EFA /* KoreBotSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D6A99B020ECF64900038721 /* AppSocketStream.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppSocketStream.swift; sourceTree = "<group>"; };
@@ -268,6 +291,7 @@
 		2D6A9B0D20ED11F200038721 /* DTFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DTFoundation.framework; path = Carthage/Build/iOS/DTFoundation.framework; sourceTree = "<group>"; };
 		2D6A9B1120ED12D100038721 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		2D6A9B1420ED14C500038721 /* SDKConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKConfiguration.swift; sourceTree = "<group>"; };
+		2D74116C20EF93FC00509EFA /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		2DF0AB6220EEA2DE00436075 /* KoreBotSDK-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KoreBotSDK-prefix.pch"; sourceTree = "<group>"; };
 		5012467752FE905DD0F3BF68 /* KoreBotSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = KoreBotSDK.h; sourceTree = "<group>"; };
 		53F954AC9FC7F931F29A1930 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
@@ -287,13 +311,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D6A99DD20ECFBD800038721 /* libstdc++.tbd in Frameworks */,
 				2D6A99DB20ECF8B900038721 /* MessageUI.framework in Frameworks */,
 				2D6A99D720ECF89B00038721 /* MobileCoreServices.framework in Frameworks */,
 				2D6A99D820ECF89B00038721 /* CoreTelephony.framework in Frameworks */,
 				2D6A99D320ECF87300038721 /* SystemConfiguration.framework in Frameworks */,
 				2D6A99D120ECF84C00038721 /* LocalAuthentication.framework in Frameworks */,
-				2D6A99CD20ECF79700038721 /* libz.tbd in Frameworks */,
 				2D6A99CB20ECF72800038721 /* GD.framework in Frameworks */,
 				57A2889616212E61810B521A /* AFNetworking.framework in Frameworks */,
 				6B7BA86CBADA02EBF2C82591 /* Mantle.framework in Frameworks */,
@@ -305,7 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DF0AB6120EE76E400436075 /* KoreBotSDK.framework in Frameworks */,
+				2D74116E20EF940500509EFA /* libstdc++.6.0.9.tbd in Frameworks */,
 				2DF0AB5320EE58D100436075 /* LocalAuthentication.framework in Frameworks */,
 				2D0F0FB020EEE8A5003EB9CD /* libstdc++.tbd in Frameworks */,
 				2DF0AB5220EE58BE00436075 /* SystemConfiguration.framework in Frameworks */,
@@ -314,6 +336,7 @@
 				2DF0AB5020EE588D00436075 /* MobileCoreServices.framework in Frameworks */,
 				2DF0AB4F20EE588500436075 /* MessageUI.framework in Frameworks */,
 				2D6A9B1820ED166E00038721 /* CoreData.framework in Frameworks */,
+				2D74116F20EF9CF800509EFA /* KoreBotSDK.framework in Frameworks */,
 				2D6A9B0F20ED11F200038721 /* TOWebViewController.framework in Frameworks */,
 				2D6A9B1720ED165600038721 /* AFNetworking.framework in Frameworks */,
 				2D6A9B0A20ED11E500038721 /* Charts.framework in Frameworks */,
@@ -836,6 +859,7 @@
 		E9FA594AC6B2012D4A517F14 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D74116C20EF93FC00509EFA /* libstdc++.6.0.9.tbd */,
 				53F954AC9FC7F931F29A1930 /* AFNetworking.framework */,
 				2D6A9B0920ED11E400038721 /* Charts.framework */,
 				2D6A99D620ECF89B00038721 /* CoreData.framework */,
@@ -896,10 +920,12 @@
 				B85E23CE1FA82918004CD008 /* Frameworks */,
 				B85E23CF1FA82918004CD008 /* Resources */,
 				2D6A9B0820ED112900038721 /* ShellScript */,
+				2D74117320EF9CF900509EFA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2D74117220EF9CF800509EFA /* PBXTargetDependency */,
 			);
 			name = KoreBotSDKDemo;
 			productName = KoreBotSDKDemo;
@@ -973,7 +999,6 @@
 				2D6A9B1220ED12D100038721 /* Entitlements.plist in Resources */,
 				2D6A9B1D20ED177800038721 /* KRETypingCollectionViewCell.xib in Resources */,
 				2D6A9B1E20ED17B900038721 /* citisso-7dc8.nam.nsroot.net.cer in Resources */,
-				2D6A9AD120ED0CFA00038721 /* default.xcconfig in Resources */,
 				B85E23FF1FA82D8A004CD008 /* Assets.xcassets in Resources */,
 				2D6A9B2120ED17C700038721 /* Assets.xcassets in Resources */,
 				B85E24001FA82D8A004CD008 /* LaunchScreen.storyboard in Resources */,
@@ -1108,6 +1133,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2D74117220EF9CF800509EFA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B85E23C11FA8288D004CD008 /* KoreBotSDK */;
+			targetProxy = 2D74117120EF9CF800509EFA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B85E23F81FA82D8A004CD008 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1227,6 +1260,7 @@
 		};
 		B85E23CB1FA8288D004CD008 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6A9ACF20ED0CFA00038721 /* default.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -1243,6 +1277,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks";
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citi.mcoe.korebotsdk;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
@@ -1255,6 +1290,7 @@
 		};
 		B85E23CC1FA8288D004CD008 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D6A9ACF20ED0CFA00038721 /* default.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -1271,6 +1307,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Frameworks";
+				MACH_O_TYPE = staticlib;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_BUNDLE_IDENTIFIER = com.citi.mcoe.korebotsdk;
 				PRODUCT_MODULE_NAME = "$(TARGET_NAME)";
